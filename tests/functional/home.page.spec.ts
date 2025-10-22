@@ -12,8 +12,6 @@ test.describe('Home Page Feature Suite', () => {
         // Navigate once to the base URL
         await page.goto(process.env.BASE_URL ?? 'http://localhost:3000');
 
-        // Store references for reuse
-        homePage.page = page;
     });
 
     test('should display logo', async () => {
