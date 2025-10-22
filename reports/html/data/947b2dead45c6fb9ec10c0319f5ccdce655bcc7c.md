@@ -1,0 +1,292 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - link "Skip to main content" [ref=e3] [cursor=pointer]:
+      - /url: "#main-content"
+    - generic [ref=e4]:
+      - link "Follow Reliance Retail on LinkedIn" [ref=e5] [cursor=pointer]:
+        - /url: https://www.linkedin.com/company/reliance-retail
+        - generic [ref=e6]: 
+      - link "Follow Reliance Retail on Instagram" [ref=e7] [cursor=pointer]:
+        - /url: https://www.instagram.com/lifeatrelianceretail/
+        - generic [ref=e8]: 
+      - link "Follow Reliance Retail on Facebook" [ref=e9] [cursor=pointer]:
+        - /url: https://www.facebook.com/LifeAtRelianceRetail
+        - generic [ref=e10]: 
+    - heading "Reliance Retail" [level=1] [ref=e11]
+    - tablist "Homepage highlights" [ref=e12]:
+      - generic [ref=e13]:
+        - tab "Slide 1 Selected" [selected] [ref=e14] [cursor=pointer]
+        - tab "Slide 2" [ref=e15] [cursor=pointer]
+        - tab "Slide 3" [ref=e16] [cursor=pointer]
+      - tabpanel "Slide 1 Selected" [ref=e18]:
+        - generic [ref=e19]:
+          - heading "Customer First" [level=2] [ref=e20]
+          - paragraph [ref=e21]: Building India's largest retail company
+      - button "Previous Slide" [ref=e22] [cursor=pointer]
+      - button "Next Slide" [ref=e23] [cursor=pointer]
+    - generic [ref=e25]:
+      - generic [ref=e27]:
+        - heading "Your Account" [level=2] [ref=e28]
+        - link "Sign in" [ref=e29] [cursor=pointer]:
+          - /url: https://www.relianceretail.com/R1/
+        - link "Sign up" [ref=e30] [cursor=pointer]:
+          - /url: https://www.relianceretail.com/R1/
+      - generic [ref=e31]:
+        - heading "About Us" [level=2] [ref=e33]
+        - generic [ref=e34]:
+          - paragraph [ref=e35]: Since its inception in 2006, Reliance Retail has grown to become India’s largest retailer delivering superior value to its customers, suppliers and shareholders. Our nationwide network of retail outlets delivers a world-class shopping environment and unmatched customer experience powered by our state-of-the-art technology and seamless supply-chain infrastructure.
+          - link "Learn more about us." [ref=e36] [cursor=pointer]:
+            - /url: our-business.html
+    - generic [ref=e39]:
+      - heading "Our Brands" [level=2] [ref=e41]
+      - region "Our Brands Carousel" [ref=e43]:
+        - generic [ref=e44]:
+          - generic [ref=e46]:
+            - 'group "Brand: Smart Bazaar" [ref=e48]':
+              - link "Smart Bazaar logo Smart Bazaar Navigate to next brand" [ref=e51] [cursor=pointer]:
+                - /url: "#"
+                - img "Smart Bazaar logo" [ref=e53]
+                - paragraph [ref=e54]: Smart Bazaar
+                - img "Navigate to next brand" [ref=e55]
+            - 'group "Brand: Smart Super Store" [ref=e57]':
+              - link "Smart Super Store logo Smart Super Store Navigate to next brand" [ref=e60] [cursor=pointer]:
+                - /url: "#"
+                - img "Smart Super Store logo" [ref=e62]
+                - paragraph [ref=e63]: Smart Super Store
+                - img "Navigate to next brand" [ref=e64]
+            - 'group "Brand: Neighbourhood Convenience Store" [ref=e66]':
+              - link "Neighbourhood Convenience Store logo Neighbourhood Convenience Store Navigate to next brand" [ref=e69] [cursor=pointer]:
+                - /url: reliance-smart.html#ril-fd
+                - img "Neighbourhood Convenience Store logo" [ref=e71]
+                - paragraph [ref=e72]: Neighbourhood Convenience Store
+                - img "Navigate to next brand" [ref=e73]
+            - 'group "Brand: Fresh Signature" [ref=e75]':
+              - link "Fresh Signature logo Fresh Signature is a reimagined contemporary supermarket Navigate to next brand" [ref=e78] [cursor=pointer]:
+                - /url: fresh-signature.html
+                - img "Fresh Signature logo" [ref=e80]
+                - paragraph [ref=e81]: Fresh Signature is a reimagined contemporary supermarket
+                - img "Navigate to next brand" [ref=e82]
+            - 'group "Brand: 7-Eleven" [ref=e84]':
+              - 'link "7-Eleven logo World’s #1 convenience store Navigate to next brand" [ref=e87] [cursor=pointer]':
+                - /url: 7-Eleven.html
+                - img "7-Eleven logo" [ref=e89]
+                - paragraph [ref=e90]: "World’s #1 convenience store"
+                - img "Navigate to next brand" [ref=e91]
+            - 'group "Brand: Freshpik" [ref=e93]':
+              - 'link "Freshpik logo Freshpik: one-of-a-kind contemporary food and grocery destination Navigate to next brand" [ref=e96] [cursor=pointer]':
+                - /url: freshpik.html
+                - img "Freshpik logo" [ref=e98]
+                - paragraph [ref=e99]: "Freshpik: one-of-a-kind contemporary food and grocery destination"
+                - img "Navigate to next brand" [ref=e100]
+            - 'group "Brand: Shri Kannan Smart" [ref=e102]':
+              - link "Shri Kannan Smart logo Shri Kannan Smart Navigate to next brand" [ref=e105] [cursor=pointer]:
+                - /url: "#"
+                - img "Shri Kannan Smart logo" [ref=e107]
+                - paragraph [ref=e108]: Shri Kannan Smart
+                - img "Navigate to next brand" [ref=e109]
+            - 'group "Brand: Jaisuryas" [ref=e111]':
+              - link "Jaisuryas Stores logo Supermarket Navigate to next brand" [ref=e114] [cursor=pointer]:
+                - /url: "#"
+                - img "Jaisuryas Stores logo" [ref=e116]
+                - paragraph [ref=e117]: Supermarket
+                - img "Navigate to next brand" [ref=e118]
+            - 'group "Brand: Ajio" [ref=e120]':
+              - link "Ajio logo Curated online fashion store Navigate to next brand" [ref=e123] [cursor=pointer]:
+                - /url: https://www.ajio.com/
+                - img "Ajio logo" [ref=e125]
+                - paragraph [ref=e126]: Curated online fashion store
+                - img "Navigate to next brand" [ref=e127]
+          - generic:  
+        - generic [ref=e128]:
+          - button "Previous Brand" [ref=e129] [cursor=pointer]: ⟨
+          - button "Next Brand" [ref=e130] [cursor=pointer]: ⟩
+  - generic:
+    - link "Skip to main content" [ref=e131] [cursor=pointer]:
+      - /url: "#main-content"
+    - banner [ref=e132]:
+      - navigation "Main navigation" [ref=e135]:
+        - link "Go to homepage" [ref=e136] [cursor=pointer]:
+          - /url: index.html
+          - img "Reliance Retail Logo" [ref=e137]
+        - menubar [ref=e138]:
+          - menuitem "About Us" [ref=e139] [cursor=pointer]
+          - text:     
+          - menuitem "Our Brands" [ref=e140] [cursor=pointer]
+          - text:                            
+          - menuitem "Investor Relations" [ref=e141] [cursor=pointer]
+          - text:   
+          - menuitem "Careers" [ref=e142] [cursor=pointer]
+          - text:  
+          - menuitem "Store Locator" [ref=e143] [cursor=pointer]:
+            - text: Store Locator
+            - generic [ref=e144]: 
+  - generic [ref=e147]:
+    - contentinfo "Footer" [ref=e148]:
+      - generic [ref=e151]:
+        - generic "About Us" [ref=e152]:
+          - heading "Footer Sections" [level=2] [ref=e153]
+          - heading "About Us Section" [level=3] [ref=e154]
+          - heading "About Us" [level=5] [ref=e155]
+          - list "About Us Links" [ref=e156]:
+            - listitem [ref=e157]:
+              - link "Our Business" [ref=e158] [cursor=pointer]:
+                - /url: our-business.html
+            - listitem [ref=e159]:
+              - link "Key Facts" [ref=e160] [cursor=pointer]:
+                - /url: key-facts.html
+            - listitem [ref=e161]:
+              - link "Milestones" [ref=e162] [cursor=pointer]:
+                - /url: milestone.html
+            - listitem [ref=e163]:
+              - link "Awards & Recognition" [ref=e164] [cursor=pointer]:
+                - /url: award.html
+            - listitem [ref=e165]:
+              - link "About RIL" [ref=e166] [cursor=pointer]:
+                - /url: http://www.ril.com/OurCompany/About.aspx
+        - generic "Our Brands" [ref=e167]:
+          - heading "Our Brands Section" [level=3] [ref=e168]
+          - heading "Our Brands" [level=5] [ref=e169]
+          - list "Brand Links Column 1" [ref=e170]:
+            - listitem [ref=e171]:
+              - link "Freshpik" [ref=e172] [cursor=pointer]:
+                - /url: freshpik.html
+            - listitem [ref=e173]:
+              - link "Fresh Signature" [ref=e174] [cursor=pointer]:
+                - /url: fresh-signature.html
+            - listitem [ref=e175]:
+              - link "Reliance Smart" [ref=e176] [cursor=pointer]:
+                - /url: reliance-smart.html
+            - listitem [ref=e177]:
+              - link "Reliance Smart Point" [ref=e178] [cursor=pointer]:
+                - /url: reliance-smart.html#rilsmtpnt
+            - listitem [ref=e179]:
+              - link "JioMart" [ref=e180] [cursor=pointer]:
+                - /url: reliance-jiomart.html
+            - listitem [ref=e181]:
+              - link "Reliance Digital" [ref=e182] [cursor=pointer]:
+                - /url: reliance-digital.html
+            - listitem [ref=e183]:
+              - link "JioMart Digital" [ref=e184] [cursor=pointer]:
+                - /url: jiomart-digital.html
+            - listitem [ref=e185]:
+              - link "Cover Story" [ref=e186] [cursor=pointer]:
+                - /url: cover-story.html
+            - listitem [ref=e187]:
+              - link "GAP" [ref=e188] [cursor=pointer]:
+                - /url: gap.html
+            - listitem [ref=e189]:
+              - link "METRO Wholesale India" [ref=e190] [cursor=pointer]:
+                - /url: metro-wholesale-India.html
+            - listitem [ref=e191]:
+              - link "Avantra By Trends" [ref=e192] [cursor=pointer]:
+                - /url: avantra-by-trends.html
+            - listitem [ref=e193]:
+              - link "Jio Stores" [ref=e194] [cursor=pointer]:
+                - /url: reliance-digital.html#riljiostr
+            - listitem [ref=e195]:
+              - link "Reliance Trends" [ref=e196] [cursor=pointer]:
+                - /url: reliance-trends.html
+            - listitem [ref=e197]:
+              - link "Yousta" [ref=e198] [cursor=pointer]:
+                - /url: https://relianceretail.com/nps/yousta/stores
+          - list "Brand Links Column 2" [ref=e199]:
+            - listitem [ref=e200]:
+              - link "Trends Footwear" [ref=e201] [cursor=pointer]:
+                - /url: trends-footwear.html
+            - listitem [ref=e202]:
+              - link "Reliance Jewels" [ref=e203] [cursor=pointer]:
+                - /url: reliance-jewels.html
+            - listitem [ref=e204]:
+              - link "AZORTE" [ref=e205] [cursor=pointer]:
+                - /url: reliance-azorte.html
+            - listitem [ref=e206]:
+              - link "CENTRO" [ref=e207] [cursor=pointer]:
+                - /url: reliance-centro.html
+            - listitem [ref=e208]:
+              - link "Fashion Factory" [ref=e209] [cursor=pointer]:
+                - /url: fashion-factory.html
+            - listitem [ref=e210]:
+              - link "Fynd's Properties" [ref=e211] [cursor=pointer]:
+                - /url: fynd-properties.html
+            - listitem [ref=e212]:
+              - link "AJIO" [ref=e213] [cursor=pointer]:
+                - /url: ajio.html
+            - listitem [ref=e214]:
+              - link "Hamleys" [ref=e215] [cursor=pointer]:
+                - /url: hamleys.html
+            - listitem [ref=e216]:
+              - link "Reliance Brands" [ref=e217] [cursor=pointer]:
+                - /url: partner-brands.html
+            - listitem [ref=e218]:
+              - link "Reliance Mall" [ref=e219] [cursor=pointer]:
+                - /url: /RelianceMall/RelianceMallLocator.aspx
+            - listitem [ref=e220]:
+              - link "7-Eleven" [ref=e221] [cursor=pointer]:
+                - /url: 7-Eleven.html
+            - listitem [ref=e222]:
+              - link "Ancestry" [ref=e223] [cursor=pointer]:
+                - /url: ancestry.html
+            - listitem [ref=e224]:
+              - link "Netmeds" [ref=e225] [cursor=pointer]:
+                - /url: netmeds.html
+            - listitem [ref=e226]:
+              - link "Portico" [ref=e227] [cursor=pointer]:
+                - /url: portico.html
+            - listitem [ref=e228]:
+              - link "Kalanikethan – VRK" [ref=e229] [cursor=pointer]:
+                - /url: kalanikethan-vrk.html
+        - generic "Careers" [ref=e230]:
+          - heading "Careers & Investors Section" [level=3] [ref=e231]
+          - heading "Careers" [level=5] [ref=e232]
+          - list "Career Links" [ref=e233]:
+            - listitem [ref=e234]:
+              - link "Apply Now" [ref=e235] [cursor=pointer]:
+                - /url: https://rcareers.ril.com/sap(bD1lbiZjPTQ0OQ==)/bc/bsp/sap/zerec_home_page/home_page.do
+          - heading "Investor Relations" [level=5] [ref=e236]
+          - list "Investor Relations" [ref=e237]:
+            - listitem [ref=e238]:
+              - link "RRVL Investor Relations" [ref=e239] [cursor=pointer]:
+                - /url: rrvl.html
+            - listitem [ref=e240]:
+              - link "RRL Investor Relations" [ref=e241] [cursor=pointer]:
+                - /url: rrl.html
+            - listitem [ref=e242]:
+              - link "Scheme of Arrangement" [ref=e243] [cursor=pointer]:
+                - /url: schemeofarrangement.html
+          - heading "Store Locator" [level=5] [ref=e244]:
+            - link "Store Locator" [ref=e245] [cursor=pointer]:
+              - /url: http://storelocator.ril.com/Retail.aspx
+        - generic "Reach Us" [ref=e246]:
+          - heading "Reach Us Section" [level=3] [ref=e247]
+          - heading "Reach Us" [level=5] [ref=e248]
+          - paragraph [ref=e249]:
+            - text: "Customer Care:"
+            - link "Call customer care number 1800 891 0001" [ref=e250] [cursor=pointer]:
+              - /url: tel:18008910001
+              - text: 1800 891 0001
+            - text: /
+            - link "Call customer care number 1800 102 7382" [ref=e251] [cursor=pointer]:
+              - /url: tel:18001027382
+              - text: 1800 102 7382
+          - paragraph [ref=e252]:
+            - text: "Customer Service e-mail:"
+            - link "Email to customer service" [ref=e253] [cursor=pointer]:
+              - /url: mailto:customerservice@ril.com
+              - text: customerservice@ril.com
+      - generic "Legal and Policy Information" [ref=e254]:
+        - generic [ref=e256]:
+          - paragraph [ref=e258]: © Reliance Retail. All rights reserved.
+          - paragraph [ref=e260]:
+            - link "Equal Opportunity Policy" [ref=e261] [cursor=pointer]:
+              - /url: equal-opportunity.html
+            - text: "|"
+            - link "Privacy Policy" [ref=e262] [cursor=pointer]:
+              - /url: privacy-policy.html
+    - link "Back to top of page" [ref=e264] [cursor=pointer]:
+      - /url: "#top"
+      - generic [ref=e266]: 
+  - button "Pause carousel" [ref=e267] [cursor=pointer]: ❙❙
+```
