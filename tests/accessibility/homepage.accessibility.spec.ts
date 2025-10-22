@@ -15,6 +15,10 @@ test.describe('Accessibility Audit - Home Page (WCAG 2.1 AA)', () => {
       console.log(`❌ ${v.id}: ${v.help} (${v.impact})`);
     }
 
-    expect(violations.length, 'No WCAG 2.1 AA violations expected').toBe(0);
+    expect(violations.length, 
+    violations.length > 0 
+        ? ` Found ${violations.length} WCAG 2.1 AA violation(s):\n${violations.map(v => `- ${v.id}: ${v.description}`).join('\n')}` 
+        : ' No WCAG 2.1 AA violations found'
+    ).toBe(0);
   });
 });
