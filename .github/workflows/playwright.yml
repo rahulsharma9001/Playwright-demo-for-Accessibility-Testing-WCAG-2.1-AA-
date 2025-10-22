@@ -1,43 +1,17 @@
-name: Playwright Tests
-on:
-  push:
-    branches: [ main, master ]
-  pull_request:
-    branches: [ main, master ]
-jobs:
-  test:
-    timeout-minutes: 60
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-node@v4
-      with:
-        node-version: lts/*
-    - name: Install dependencies
-      run: npm ci
-    - name: Install Playwright Browsers
-      run: npx playwright install --with-deps
-    - name: Run Playwright tests
-      run: npx playwright test
-    - uses: actions/upload-artifact@v4
-      if: ${{ !cancelled() }}
-      with:
-        name: playwright-report
-        path: playwright-report/
-        retention-days: 30
-
 name: Playwright Accessibility Tests
 
 on:
   push:
-    branches: [ main, feature/** ]
+    branches: [ main, master, 'feature/**' ]
   pull_request:
-    branches: [ main ]
+    branches: [ main, master ]
   workflow_dispatch: {}
 
 jobs:
-  test:
+  functional-tests:
+    name: Functional Playwright tests
     runs-on: ubuntu-latest
+    timeout-minutes: 60
     strategy:
       matrix:
         node-version: [18.x]
@@ -57,30 +31,71 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
 
-      - name: Run Playwright tests (accessibility)
-        run: npx playwright test --config=playwright.config.js --reporter=list
+      - name: Run Playwright functional tests
+        run: npx playwright test tests/functional --reporter=html || true
 
-      - name: Generate Playwright HTML report
-        if: success() || failure()
-        run: npx playwright show-report --reporter=html || true
-
-      - name: Upload Playwright report artifact
+      - name: Upload functional playwright-report
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: playwright-report
+          name: playwright-report-functional
           path: playwright-report
+          retention-days: 30
 
-      - name: Upload test-results artifact
+      - name: Upload functional test-results
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: test-results
+          name: test-results-functional
           path: test-results
+          retention-days: 30
 
-      - name: Upload HTML reports directory
+  accessibility-tests:
+    name: Accessibility Playwright tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      matrix:
+        node-version: [18.x]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      - name: Run Playwright accessibility tests (axe/pa11y)
+        run: npx playwright test tests/accessibility --reporter=html || true
+
+      - name: Upload accessibility playwright-report
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: html-report
+          name: playwright-report-accessibility
+          path: playwright-report
+          retention-days: 30
+
+      - name: Upload accessibility test-results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results-accessibility
+          path: test-results
+          retention-days: 30
+
+      - name: Upload accessibility HTML reports directory
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: html-report-accessibility
           path: reports/html
+          retention-days: 30
