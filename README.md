@@ -82,9 +82,26 @@ The functional tests are stored under `tests/functional`.
 Run locally:
 
 ```bash
-   npx playwright test tests/functional --reporter=html
+   npx playwright test tests/home.page.spec.ts
+
    # open the generated report
    npx playwright show-report
+```
+
+Alternatively, use the npm scripts defined in `package.json`:
+
+```bash
+# Run only functional tests
+npm run test:functional
+
+# Run accessibility tests
+npm run test:accessibility
+
+# Run all tests
+npm test
+
+# Show the Playwright HTML report
+npm run show-report
 ```
 
 Artifacts:
@@ -100,7 +117,7 @@ Accessibility tests are implemented using `@axe-core/playwright` (axe-core integ
 Run locally:
 
 ```bash
-   npx playwright test tests/accessibility --reporter=html
+   npx playwright test tests/accessibility/homepage.accessibility.spec.ts
    npx playwright show-report
 ```
 

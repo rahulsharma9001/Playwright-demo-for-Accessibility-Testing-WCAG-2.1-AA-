@@ -2,7 +2,12 @@
   "name": "playwright-demo",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test:functional": "npx playwright test tests/functional --reporter=html",
+    "test:accessibility": "npx playwright test tests/accessibility --reporter=html",
+    "test": "npx playwright test --reporter=html",
+    "show-report": "npx playwright show-report"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
